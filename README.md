@@ -4,9 +4,7 @@
 An api used to manage categories of products, different products, and different attributes of those products for an e-commerce store.
 
 ## Todo
-- Connect to sequelize with .env with db name, MySQL username, and MySQL password
 - Make schema and seed commands with sequelize
-- When the server is started sequelize is synced to the MySQL database
 - Get routes return formatted JSON and checked with Insomnia
   - categories
     - all categories
@@ -34,3 +32,15 @@ An api used to manage categories of products, different products, and different 
 - Sumbit
   - video
   - github
+
+get /api/tags
+get /api/products
+get /api/categories
+
+get /api/tags/1
+get /api/products/1
+get /api/categories/1
+
+post    /api/tags/
+put     /api/tags/:id
+delete  /api/tags/:id
