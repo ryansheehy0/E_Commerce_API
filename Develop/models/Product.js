@@ -37,8 +37,8 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        modal: `category`,
-        key: `id`
+        modal: 'Category',
+        key: 'id'
       }
     }
   },
