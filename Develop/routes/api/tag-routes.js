@@ -1,28 +1,28 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
+const API = require('./api-class')
+const tagAPI = new API(Tag, {linkedModel: Product, junctionModel: ProductTag})
 
 // The `/api/tags` endpoint
 
 router.get('/', (req, res) => {
-  // find all tags
-  // be sure to include its associated Product data
+  tagAPI.getAll(req, res)
 });
 
 router.get('/:id', (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
+  tagAPI.getId(req, res)
 });
 
 router.post('/', (req, res) => {
-  // create a new tag
+  tagAPI.create(req, res)
 });
 
 router.put('/:id', (req, res) => {
-  // update a tag's name by its `id` value
+  tagAPI.update(req, res)
 });
 
 router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
+  tagAPI.delete(req, res)
 });
 
 module.exports = router;
